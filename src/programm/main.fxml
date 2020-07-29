@@ -1,8 +1,105 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="programm.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #9e9999;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="-5.0" prefHeight="69.0" prefWidth="406.0" style="-fx-background-color: #373535;">
+         <children>
+            <Label layoutX="123.0" text="SQUAD" textFill="#fcf9f9">
+               <font>
+                  <Font name="Silom" size="49.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="69.0" prefHeight="52.0" prefWidth="400.0" style="-fx-background-color: #8c8989;">
+         <children>
+            <Label layoutX="109.0" layoutY="9.0" text="Registration" textFill="#fd9b0e">
+               <font>
+                  <Font name="Silom" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="14.0" layoutY="444.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="155.0" style="-fx-background-color: #4e7e56; -fx-background-radius: 20;" text="SingUP" textFill="WHITE">
+         <font>
+            <Font name="Silom" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="231.0" layoutY="444.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="155.0" style="-fx-background-color: #833636; -fx-background-radius: 20;" text="SingIN" textFill="WHITE">
+         <font>
+            <Font name="Silom" size="13.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="14.0" layoutY="136.0" prefHeight="39.0" prefWidth="142.0" style="-fx-background-color: #373535 #373535;">
+         <children>
+            <Text fill="#f8f5f5" layoutX="36.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Firstname">
+               <font>
+                  <Font name="Silom" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TextField layoutX="14.0" layoutY="175.0" prefHeight="39.0" prefWidth="142.0" promptText="Firstname" style="-fx-background-radius: 0;">
+         <font>
+            <Font name="Silom" size="14.0" />
+         </font>
+      </TextField>
+      <AnchorPane layoutX="244.0" layoutY="136.0" prefHeight="39.0" prefWidth="142.0" style="-fx-background-color: #373535 #373535;">
+         <children>
+            <Text fill="#f8f5f5" layoutX="32.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname">
+               <font>
+                  <Font name="Silom" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TextField layoutX="244.0" layoutY="175.0" prefHeight="39.0" prefWidth="142.0" promptText="Surname" style="-fx-background-radius: 0;">
+         <font>
+            <Font name="Silom" size="14.0" />
+         </font>
+      </TextField>
+      <AnchorPane layoutX="244.0" layoutY="266.0" prefHeight="39.0" prefWidth="142.0" style="-fx-background-color: #373535 #373535;">
+         <children>
+            <Text fill="#f8f5f5" layoutX="27.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font name="Silom" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="266.0" prefHeight="39.0" prefWidth="142.0" style="-fx-background-color: #373535 #373535;">
+         <children>
+            <Text fill="#f8f5f5" layoutX="32.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+               <font>
+                  <Font name="Silom" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TextField layoutX="14.0" layoutY="305.0" prefHeight="39.0" prefWidth="142.0" promptText="Username" style="-fx-background-radius: 0;">
+         <font>
+            <Font name="Silom" size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField layoutX="244.0" layoutY="305.0" prefHeight="39.0" prefWidth="142.0" promptText="Password" style="-fx-background-radius: 0;">
+         <font>
+            <Font name="Silom" size="14.0" />
+         </font>
+      </PasswordField>
+      <CheckBox layoutX="14.0" layoutY="380.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="200.0" text="I agree with privacy" textFill="#f5f3f3">
+         <font>
+            <Font name="Silom" size="15.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>
