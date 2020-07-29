@@ -9,8 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #9e9999;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #9e9999;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programm.Controller">
    <children>
       <AnchorPane layoutX="-5.0" prefHeight="69.0" prefWidth="406.0" style="-fx-background-color: #373535;">
          <children>
@@ -30,12 +29,12 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="14.0" layoutY="444.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="155.0" style="-fx-background-color: #4e7e56; -fx-background-radius: 20;" text="SingUP" textFill="WHITE">
+      <Button fx:id="singUP_button" layoutX="14.0" layoutY="444.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="155.0" styleClass="singUpButton" stylesheets="@../assets/style.css" text="SingUP" textFill="WHITE">
          <font>
             <Font name="Silom" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="231.0" layoutY="444.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="155.0" style="-fx-background-color: #833636; -fx-background-radius: 20;" text="SingIN" textFill="WHITE">
+      <Button fx:id="SingIN_button" layoutX="231.0" layoutY="444.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="155.0" styleClass="singINButton" stylesheets="@../assets/style.css" text="SingIN" textFill="WHITE">
          <font>
             <Font name="Silom" size="13.0" />
          </font>
@@ -49,7 +48,7 @@
             </Text>
          </children>
       </AnchorPane>
-      <TextField layoutX="14.0" layoutY="175.0" prefHeight="39.0" prefWidth="142.0" promptText="Firstname" style="-fx-background-radius: 0;">
+      <TextField fx:id="firstname_field" layoutX="14.0" layoutY="175.0" prefHeight="39.0" prefWidth="142.0" promptText="Firstname" style="-fx-background-radius: 0;">
          <font>
             <Font name="Silom" size="14.0" />
          </font>
@@ -63,7 +62,7 @@
             </Text>
          </children>
       </AnchorPane>
-      <TextField layoutX="244.0" layoutY="175.0" prefHeight="39.0" prefWidth="142.0" promptText="Surname" style="-fx-background-radius: 0;">
+      <TextField fx:id="surname_field" layoutX="244.0" layoutY="175.0" prefHeight="39.0" prefWidth="142.0" promptText="Surname" style="-fx-background-radius: 0;">
          <font>
             <Font name="Silom" size="14.0" />
          </font>
@@ -86,17 +85,17 @@
             </Text>
          </children>
       </AnchorPane>
-      <TextField layoutX="14.0" layoutY="305.0" prefHeight="39.0" prefWidth="142.0" promptText="Username" style="-fx-background-radius: 0;">
+      <TextField fx:id="username_field" layoutX="14.0" layoutY="305.0" prefHeight="39.0" prefWidth="142.0" promptText="Username" style="-fx-background-radius: 0;">
          <font>
             <Font name="Silom" size="14.0" />
          </font>
       </TextField>
-      <PasswordField layoutX="244.0" layoutY="305.0" prefHeight="39.0" prefWidth="142.0" promptText="Password" style="-fx-background-radius: 0;">
+      <PasswordField fx:id="password_field" layoutX="244.0" layoutY="305.0" prefHeight="39.0" prefWidth="142.0" promptText="Password" style="-fx-background-radius: 0;">
          <font>
             <Font name="Silom" size="14.0" />
          </font>
       </PasswordField>
-      <CheckBox layoutX="14.0" layoutY="380.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="200.0" text="I agree with privacy" textFill="#f5f3f3">
+      <CheckBox fx:id="privacy_checkbox" layoutX="14.0" layoutY="380.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="200.0" text="I agree with privacy" textFill="#f5f3f3">
          <font>
             <Font name="Silom" size="15.0" />
          </font>

@@ -1,0 +1,22 @@
+.singUpButton:hover {
+    -fx-background-color: #285f32;
+}
+.singUpButton {
+    -fx-background-color:#4e7e56;
+    -fx-border-radius: 0;
+}
+.singINButton {
+    -fx-border-radius: 0;
+    -fx-background-color:  #833636;
+}
+.singINButton:hover {
+    -fx-background-color: #802525;
+}
+.labelGit{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+.labelGit:hover{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
