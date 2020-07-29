@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #9e9999;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programm.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #9e9999;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programm.ControllerLogin">
     <children>
         <AnchorPane layoutX="-5.0" prefHeight="69.0" prefWidth="406.0" style="-fx-background-color: #373535;">
             <children>
@@ -66,5 +66,10 @@
                 <Font name="Silom" size="14.0" />
             </font>
         </PasswordField>
+      <Label fx:id="git_label" alignment="CENTER" layoutY="277.0" onMouseClicked="#git_url" prefHeight="33.0" prefWidth="31.0" styleClass="labelGit" stylesheets="@../assets/style.css" text="G" textAlignment="CENTER">
+         <font>
+            <Font name="Silom" size="18.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
