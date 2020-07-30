@@ -43,9 +43,9 @@ public class ControllerLogin {
            SceneLoader sceneLoader = new SceneLoader();
            sceneLoader.SceneLoader("main", singUP_button);
        });
+
     }
      public void git_url () {
-
          if (Desktop.isDesktopSupported()) {
              Desktop desktop = Desktop.getDesktop();
              try {
@@ -63,4 +63,5 @@ public class ControllerLogin {
              alert.showAndWait();
          }
      }
+
 }

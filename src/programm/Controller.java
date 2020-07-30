@@ -44,9 +44,21 @@ public class Controller {
 
     @FXML
     void initialize() {
+        DatabaseHendler databaseHendler = new DatabaseHendler();
        SingIN_button.setOnAction(event -> {
            SceneLoader sceneLoader = new SceneLoader();
            sceneLoader.SceneLoader("login", SingIN_button);
        });
+       singUP_button.setOnAction(event -> {
+           String firstname = firstname_field.getText().trim();
+           String surname = surname_field.getText().trim();
+           String username = username_field.getText().trim();
+           String password  = password_field.getText().trim();
+           if(!firstname.equals("") && !surname.equals("") && !username.equals("")
+                   && !password.equals("") && privacy_checkbox.isSelected()){
+               databaseHendler.SingUpUser(firstname, surname, username, password);
+           }
+       });
     }
+
 }

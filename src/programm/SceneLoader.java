@@ -12,7 +12,8 @@ public class SceneLoader {
     public void SceneLoader (String scene, Node node){
         node.getScene().getWindow().hide();
         FXMLLoader loader  = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/programm/"+ scene +".fxml"));
+        loader.setLocation(getClass()
+                .getResource("/programm/"+ scene +".fxml"));
         try {
             loader.load();
         }catch (IOException e) {
@@ -21,6 +22,7 @@ public class SceneLoader {
         Parent root = loader.getRoot();
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
+        stage.setTitle("SQUAD");
         stage.setResizable(false);
         stage.showAndWait();
     }
