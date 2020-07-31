@@ -9,6 +9,8 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+
+import animations.Shake;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
@@ -52,6 +54,7 @@ public class ControllerLogin {
            int count = 0;
            String username  = username_field.getText().trim();
            String password = password_field.getText().trim();
+
            ResultSet resultSet = databaseHendler.getUser(username, password);
            while (true){
                try {
@@ -61,14 +64,32 @@ public class ControllerLogin {
                }
                count++;
            }
-           if(count <= 0){
+           if  (username.equals("") &&  password.equals("") || password.equals("") || username.equals("")){
+               Shake log_animation = new Shake(username_field);
+               Shake pas_animation = new Shake(password_field);
+               log_animation.play_anim();
+               pas_animation.play_anim();
+               Alert alert = new Alert(Alert.AlertType.WARNING);
+               alert.setTitle("Error");
+               alert.setHeaderText(null);
+               alert.setContentText("Password field or Username field is empty");
+
+               alert.show();
+           }
+           else if(count <= 0){
+               Shake log_animation = new Shake(username_field);
+               Shake pas_animation = new Shake(password_field);
+               log_animation.play_anim();
+               pas_animation.play_anim();
                Alert alert = new Alert(Alert.AlertType.WARNING);
                alert.setTitle("Error");
                alert.setHeaderText(null);
                alert.setContentText("Password or Username incorrect");
 
-               alert.showAndWait();
-           }else {
+               alert.show();
+
+           }
+           else {
                SceneLoader sceneLoader = new SceneLoader();
                sceneLoader.SceneLoader("profile", SingIN_button);
            }
