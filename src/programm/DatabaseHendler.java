@@ -3,22 +3,18 @@ package programm;
 import com.mysql.cj.jdbc.exceptions.CommunicationsException;
 import javafx.scene.control.Alert;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import  java.sql.SQLException;
-import java.sql.ResultSet;
+import java.sql.*;
+
 public class DatabaseHendler extends  Configs {
     Connection db_conection;
 
     public  Connection getDb_conection()
             throws ClassNotFoundException, SQLException {
         try {
-            String  connection_str = "jdbc:mysql://" + dbHost + ":"
-                    + dbPort + "/" + dbName + "?useUnicode=true&serverTimezone=UTC&useSSL=false" ;
+            String connectioURL = "jdbc:mysql://" + dbHost + ":" + dbPort
+                    + "/" + dbName + "?useUnicode=true&serverTimezone=UTC&useSSL=false";
             Class.forName("com.mysql.jdbc.Driver");
-            db_conection = DriverManager.getConnection(connection_str, dbUser,
-                    dbPass);
+            db_conection = DriverManager.getConnection(connectioURL, dbUser, dbPass);
 
         }catch (CommunicationsException e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -52,6 +48,22 @@ public class DatabaseHendler extends  Configs {
         }
 
 
+    }
+    public ResultSet getUser (String username, String password){
+        ResultSet resultSet = null;
+        try {
+            Statement statement = null;
+            try {
+                statement = getDb_conection().createStatement();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            resultSet = statement.executeQuery("SELECT  * FROM  users WHERE username='"+username+"'AND password='"+password+"'");
+            return  resultSet;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return  resultSet;
     }
 
 }
